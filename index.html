@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mapasaurus</title>
+	
+	<style>
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+		
+		html {
+			font-size: 10px;
+		}
+		
+		#map {
+			width: 75%;
+			padding-top: 40%;
+			margin: 5rem auto;
+			position: relative;
+		}
+		
+		.map-holder {
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="map">
+		<div class="map-holder"></div>
+	</div>
+	<!-- AIzaSyAIEg4bW4hX6wNYKcqlXK_M1LZTDM4DGgw -->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="mapasaurus.js"></script>
+	<script>
+		
+		var myMap = new tLiz.components.mapasaurus('#map .map-holder', {zoom: 10});
+			
+		myMap.init();
+	</script>
+</body>
+</html>
